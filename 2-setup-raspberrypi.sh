@@ -15,8 +15,6 @@ git clone git@github.com:adafruit/Adafruit_Python_BMP.git
 sudo python Adafruit_Python_BMP/setup.py install
 cd -
 
-#sudo pip3 install Adafruit_DHT
-
 sudo useradd -rm homeassistant -G dialout,gpio
 cd /srv
 sudo mkdir homeassistant
