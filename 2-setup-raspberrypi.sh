@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_memory_split 512
+sudo raspi-config nonint do_i2c 0
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev nmap
@@ -11,11 +12,9 @@ sudo pip install python-dateutil # required for Subsonic Kodi add-in
 cd ~
 git clone git@github.com:filhit/sensors.git
 chmod -R a+rx sensors/
-git clone git@github.com:adafruit/Adafruit_Python_BMP.git
-sudo python Adafruit_Python_BMP/setup.py install
-cd -
+sudo pip install adafruit-bmp
 
-sudo useradd -rm homeassistant -G dialout,gpio
+sudo useradd -rm homeassistant -G dialout,gpio,i2c
 cd /srv
 sudo mkdir homeassistant
 sudo chown homeassistant:homeassistant homeassistant
