@@ -27,3 +27,13 @@ sudo cp home-assistant@homeassistant.service /etc/systemd/system/home-assistant@
 sudo systemctl --system daemon-reload
 sudo systemctl enable home-assistant@homeassistant
 sudo systemctl start home-assistant@homeassistant
+
+wget https://gitlab.com/nobodyinperson/co2monitor/-/jobs/artifacts/v0.0.14/download?job=debian-package-build -O build_v0.0.14.zip
+unzip build_v0.0.14.zip
+rm build_v0.0.14.zip
+sudo dpkg -i debian-package/co2monitor_*.deb
+rm -rf debian-package
+sudo systemctl start co2monitor
+echo "Start co2monitor (try all hidraw*):"
+echo "export DEVNAME=/dev/hidraw0"
+echo "co2monitor-invoker"
