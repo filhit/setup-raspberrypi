@@ -10,6 +10,7 @@ sudo pip install python-dateutil # required for Subsonic Kodi add-in
 
 cd ~
 git clone git@github.com:filhit/sensors.git
+chmod -R a+rx sensors/
 git clone git@github.com:adafruit/Adafruit_Python_BMP.git
 sudo python Adafruit_Python_BMP/setup.py install
 cd -
