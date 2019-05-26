@@ -29,7 +29,7 @@ sudo systemctl start home-assistant@homeassistant
 wget https://gitlab.com/nobodyinperson/co2monitor/-/jobs/artifacts/v0.0.14/download?job=debian-package-build -O build_v0.0.14.zip
 unzip build_v0.0.14.zip
 rm build_v0.0.14.zip
-sudo apt install r-base-core
+sudo apt-get install r-base-core at
 sudo dpkg -i debian-package/co2monitor_*.deb
 rm -rf debian-package
 sudo systemctl start co2monitor
