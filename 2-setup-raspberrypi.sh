@@ -4,7 +4,7 @@ sudo raspi-config nonint do_memory_split 512
 sudo raspi-config nonint do_i2c 0
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev nmap
+sudo apt-get install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev libssl-dev nmap
 sudo pip install python-dateutil # required for Subsonic Kodi add-in
 
 # homeassistant installation
