@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 sudo apt install tor
 sudo systemctl enable tor
 
