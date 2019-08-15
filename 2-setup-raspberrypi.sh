@@ -25,6 +25,14 @@ sudo -u homeassistant -H ./setup-as-homeassistant-user.sh
 sudo cp home-assistant@homeassistant.service /etc/systemd/system/home-assistant@homeassistant.service
 sudo systemctl --system daemon-reload
 sudo systemctl enable home-assistant@homeassistant
+
+if [ -f "/home/pi/backup.tar.gz" ]; then
+  tar xvzf /home/pi/backup.tar.gz -C ~
+  sudo chown -R pi:pi ~/.kodi
+  sudo cp -r ~/.homeassistant /home/homeassistant/
+  sudo chown -R homeassistant:homeassistant /home/homeassistant/.homeassistant
+fi
+
 sudo systemctl start home-assistant@homeassistant
 
 wget https://gitlab.com/nobodyinperson/co2monitor/-/jobs/artifacts/v0.0.14/download?job=debian-package-build -O build_v0.0.14.zip
