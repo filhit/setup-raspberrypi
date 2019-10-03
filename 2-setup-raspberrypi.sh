@@ -5,7 +5,7 @@ sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_memory_split 512
 sudo raspi-config nonint do_i2c 0
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get --assume-yes upgrade
 sudo apt-get --assume-yes install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev libssl-dev nmap
 
 # in raspbian stretch there is no modern python which is required for new homeassistant
