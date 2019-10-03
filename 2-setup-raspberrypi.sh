@@ -7,6 +7,10 @@ sudo raspi-config nonint do_i2c 0
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get --assume-yes install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev libssl-dev nmap
+
+# in raspbian stretch there is no modern python which is required for new homeassistant
+dpkg --compare-versions `(dpkg-query --showformat='${Version}' --show python3)` lt 3.6.0 && ./install-python-3.6.sh
+
 sudo apt-get --assume-yes install python-dateutil # required for Subsonic Kodi add-in
 
 # homeassistant installation
