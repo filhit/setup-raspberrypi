@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+sudo timedatectl set-timezone Europe/Berlin
 sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_memory_split 512
 sudo raspi-config nonint do_i2c 0
