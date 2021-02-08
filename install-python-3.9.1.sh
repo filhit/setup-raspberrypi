@@ -6,9 +6,9 @@ sudo apt-get --assume-yes install build-essential tk-dev libncurses5-dev libncur
 
 #Install python
 cd ~
-wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz
-tar xzvf Python-3.6.0.tgz
-cd Python-3.6.0/
+wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
+tar xzvf Python-3.9.1.tgz
+cd Python-3.9.1/
 ./configure
 make
 sudo make install

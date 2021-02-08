@@ -11,8 +11,8 @@ sudo apt-get --assume-yes install vim tmux kodi git mc python3 python3-venv pyth
 
 git config --global user.email "filhit@gmail.com"
 git config --global user.name "filhit"
-# in raspbian stretch there is no modern python which is required for new homeassistant
-dpkg --compare-versions `(dpkg-query --showformat='${Version}' --show python3)` lt 3.6.0 && ./install-python-3.6.sh
+# in raspbian buster there is no modern python which is required for new homeassistant
+dpkg --compare-versions `(dpkg-query --showformat='${Version}' --show python3)` lt 3.9.1 && ./install-python-3.9.1.sh
 
 sudo apt-get --assume-yes install python-dateutil # required for Subsonic Kodi add-in
 
