@@ -7,7 +7,10 @@ sudo raspi-config nonint do_memory_split 512
 sudo raspi-config nonint do_i2c 0
 sudo apt-get update
 sudo apt-get --assume-yes upgrade
-sudo apt-get --assume-yes install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev libssl-dev nmap
+sudo apt-get --assume-yes install vim tmux kodi git mc python3 python3-venv python3-pip libffi-dev libssl-dev nmap snapd
+
+sudo snap install core
+sudo snap install telegram-desktop
 
 git config --global user.email "filhit@gmail.com"
 git config --global user.name "filhit"
